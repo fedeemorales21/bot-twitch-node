@@ -8,9 +8,9 @@ const client = new tmi.Client({
 	},
 	identity: {
 		username: 'BOTARDO',
-		password: 'oauth:7cyjthvqvx19dhm6u273r5jrwb629m'
+		password: 'oauth:'
 	},
-	channels: [ 'federicomorales21' ]
+	channels: [ '' ]
 });
 
 client.connect();
