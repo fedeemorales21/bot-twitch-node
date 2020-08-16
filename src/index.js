@@ -1,3 +1,4 @@
+require('dotenv').config()
 const tmi = require('tmi.js');
 
 const client = new tmi.Client({
@@ -7,10 +8,10 @@ const client = new tmi.Client({
 		reconnect: true
 	},
 	identity: {
-		username: 'BOTARDO',
-		password: 'oauth:'
+		username: process.env.BOT_USERNAME,
+		password: process.env.TOKEN_TWITCH
 	},
-	channels: [ '' ]
+	channels: [ process.env.CHANNEL ]
 });
 
 client.connect();
@@ -42,7 +43,6 @@ client.on('message', (channel, tags, message, self) => {
     if(commandName.toLowerCase() === '!love') {
 		client.say(channel, `<3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3`);
     }
-
 
 });
 
